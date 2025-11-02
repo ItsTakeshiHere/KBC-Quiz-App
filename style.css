@@ -1,0 +1,106 @@
+    body {
+      font-family: "Poppins", sans-serif;
+      background: radial-gradient(circle, #000428, #004e92);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .quiz-container {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      width: 90%;
+      max-width: 600px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #ffcc00;
+      text-shadow: 0 0 10px #ffcc00;
+    }
+
+    .question {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+
+    .options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    button {
+      background: #004e92;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+
+    button:hover {
+      background: #ffcc00;
+      color: #000;
+    }
+
+    .lifelines {
+      margin: 15px 0;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .lifeline {
+      background: #222;
+      border: 2px solid #ffcc00;
+      border-radius: 8px;
+      padding: 8px 12px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .lifeline:hover {
+      background: #ffcc00;
+      color: #000;
+    }
+
+    .money-ladder {
+      margin-top: 25px;
+      text-align: left;
+      font-size: 0.9rem;
+      border-left: 3px solid #ffcc00;
+      padding-left: 10px;
+    }
+
+    .money-step {
+      margin: 5px 0;
+      opacity: 0.6;
+    }
+
+    .active {
+      color: #ffcc00;
+      font-weight: bold;
+      opacity: 1;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .options {
+        grid-template-columns: 1fr;
+      }
+    }
